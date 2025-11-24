@@ -14,6 +14,9 @@ WORKDIR /var/www/html
 # Copia el proyecto
 COPY . .
 
+# Crea el .env a partir de la plantilla
+RUN cp .env.example .env
+
 # Instala dependencias de PHP
 RUN composer install --no-dev --optimize-autoloader
 
