@@ -23,7 +23,7 @@ Route::get('/usuarios', [App\Http\Controllers\UsuarioController::class, 'index']
 
 Route::post('/insertar-usuario-prueba', function () {
     return App\Models\Usuario::create([
-        'nombre' => 'UsuarioPrueba'
+        'usuario' => 'UsuarioPrueba'
     ]);
 });
 
