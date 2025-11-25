@@ -20,3 +20,13 @@ Route::get('/', function () {
 });*/
 
 Route::get('/usuarios', [App\Http\Controllers\UsuarioController::class, 'index']);
+
+Route::get('/insertar-usuario-prueba', function () {
+    return App\Models\Usuario::create([
+        'nombre' => 'UsuarioPrueba'
+    ]);
+});
+
+Route::get('/borrar-usuario/{id}', function ($id) {
+    return App\Models\Usuario::destroy($id);
+});
